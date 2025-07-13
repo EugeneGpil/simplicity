@@ -27,7 +27,7 @@ services:
       - ../front:/var/www/front
       - ./containers/node/logs/commandhistory:/commandhistory
     ports:
-      - ${NODE_PORT:-3000}:3000
+      - ${NODE_PORT:-9000}:9000
     user: app:app
     command: tail -F anything
     working_dir: /var/www/front

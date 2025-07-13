@@ -94,6 +94,10 @@ export default defineConfig((ctx) => {
       allowedHosts: [
         process.env.APP_URL,
       ],
+      // hmr: {
+      //   host: process.env.APP_HOST,
+      // },
+      // ws: process.env.APP_HOST,
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
