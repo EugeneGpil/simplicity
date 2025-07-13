@@ -1,0 +1,43 @@
+services:
+
+  php-fpm:
+    build:
+      context: ./containers/php
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+    volumes:
+      - ../back:/var/www/back
+      - ./containers/php/logs/commandhistory:/commandhistory
+    user: root:root
+    command: bash -cl "php-fpm"
+    working_dir: /var/www/back
+    depends_on:
+      - pgsql
+    restart: unless-stopped
+
+  pgsql:
+    image: postgres:17.5-bookworm
+    volumes:
+      - ./containers/pgsql/databases:/var/lib/postgresql/data
+    ports:
+      - ${PSQL_FORWARD_PORT:-54321}:5432
+    environment:
+      POSTGRES_DATABASE: ${DB_DATABASE:-AgileForge}
+      POSTGRES_USER: ${DB_USERNAME:-AgileForge}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-AgileForge}
+      PGDATA: /var/lib/postgresql/data/AgileForge
+    restart: unless-stopped
+
+  nginx:
+    build:
+      context: ./containers/nginx
+      args:
+        APP_HOST: ${APP_HOST:-simplicity.lc}
+    volumes:
+      - ../back:/var/www/back
+    ports:
+      - ${PORT_NGINX:-80}:80
+    depends_on:
+      - php-fpm
+    restart: unless-stopped
