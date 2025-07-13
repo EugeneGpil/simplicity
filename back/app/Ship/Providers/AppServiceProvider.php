@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Providers;
+namespace app\Ship\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use App\Ship\Parents\ParentServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class AppServiceProvider extends ParentServiceProvider
 {
     /**
      * Register any application services.
