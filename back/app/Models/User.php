@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Ship\Parents\Parents\ParentAuthenticatable;
+use App\Ship\Parents\ParentAuthenticatable;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * @property string $name
+ * @property string $email
+ */
 class User extends ParentAuthenticatable
 {
     /** @use HasFactory<UserFactory> */

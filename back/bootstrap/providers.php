@@ -1,5 +1,5 @@
 <?php
 
 return [
-    \app\Ship\Providers\AppServiceProvider::class,
+    \app\Ship\Providers\RouteServiceProvider::class,
 ];
