@@ -16,6 +16,23 @@ services:
       - pgsql
     restart: unless-stopped
 
+  node:
+    build:
+      context: ./containers/node
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+        NPM_MIRROR: ${NPM_MIRROR:-https://registry.npmjs.org/}
+    volumes:
+      - ../front:/var/www/front
+      - ./containers/node/logs/commandhistory:/commandhistory
+    ports:
+      - ${NODE_PORT:-3000}:3000
+    user: app:app
+    command: tail -F anything
+    working_dir: /var/www/front
+    restart: unless-stopped
+
   pgsql:
     image: postgres:17.5-bookworm
     volumes:

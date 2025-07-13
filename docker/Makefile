@@ -6,8 +6,11 @@ build:
 up:
 	docker compose up --detach --remove-orphans --force-recreate
 
-exec:
+back:
 	docker compose exec --user=app php-fpm bash
+
+front:
+	docker compose exec --user=app node bash
 
 down:
 	docker compose down
