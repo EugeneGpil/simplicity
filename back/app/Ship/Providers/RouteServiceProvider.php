@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Ship\Providers;
+namespace App\Ship\Providers;
 
 use App\Ship\Parents\ParentServiceProvider;
 use Illuminate\Support\Facades\Route;

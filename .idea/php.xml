@@ -129,6 +129,7 @@
       <path value="$PROJECT_DIR$/back/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/back/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/back/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/back/vendor/anhskohbo/no-captcha" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
