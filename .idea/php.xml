@@ -130,6 +130,19 @@
       <path value="$PROJECT_DIR$/back/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/back/vendor/symfony/clock" />
       <path value="$PROJECT_DIR$/back/vendor/anhskohbo/no-captcha" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/locale-list" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/native-locale-names" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/lang" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/config" />
+      <path value="$PROJECT_DIR$/back/vendor/archtechx/enums" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/locales" />
+      <path value="$PROJECT_DIR$/back/vendor/dragon-code/pretty-array" />
+      <path value="$PROJECT_DIR$/back/vendor/dragon-code/support" />
+      <path value="$PROJECT_DIR$/back/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/native-country-names" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/native-currency-names" />
+      <path value="$PROJECT_DIR$/back/vendor/laravel-lang/publisher" />
+      <path value="$PROJECT_DIR$/back/vendor/dragon-code/contracts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

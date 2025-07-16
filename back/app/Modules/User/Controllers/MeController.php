@@ -3,8 +3,8 @@
 namespace App\Modules\User\Controllers;
 
 use App\Modules\User\Resources\UserResource;
-use App\Ship\Common\JsonResponse;
 use App\Ship\Parents\ParentController;
+use Illuminate\Http\JsonResponse;
 
 class MeController extends ParentController
 {

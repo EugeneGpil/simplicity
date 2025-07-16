@@ -2,7 +2,7 @@
 
 namespace App\Ship\Parents;
 
-use App\Ship\Common\JsonResponse;
+use Illuminate\Http\JsonResponse;
 use RuntimeException;
 
 abstract class ParentController
@@ -23,6 +23,6 @@ abstract class ParentController
 
         $responseData = $resource->toArray(request());
 
-        return app(JsonResponse::class, ['data' => $responseData]);
+        return response()->json(['data' => $responseData]);
     }
 }

@@ -2,12 +2,12 @@
 
 namespace App\Modules\Authentication\Resources;
 
-use App\Modules\Authentication\Dto\CreatedUserDto;
+use App\Modules\Authentication\Dto\UserWithTokenDto;
 use App\Modules\Authentication\Ship\Resources\UserResource;
 use App\Ship\Parents\ParentResource;
 
 /**
- * @property CreatedUserDto $resource
+ * @property UserWithTokenDto $resource
  */
 class UserRegisteredResource extends ParentResource
 {
