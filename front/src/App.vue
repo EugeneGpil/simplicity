@@ -3,9 +3,12 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import user from 'src/api/user'
 
-export default defineComponent({
-  name: 'App'
-});
+export default {
+  async mounted() {
+    const me = await user.me()
+    console.log('me', me)
+  }
+}
 </script>

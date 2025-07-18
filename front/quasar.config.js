@@ -3,7 +3,7 @@
 
 import { defineConfig } from '#q-app/wrappers'
 import { fileURLToPath } from 'node:url'
-import 'dotenv/config'
+import app from 'src/config/app.js'
 
 export default defineConfig((ctx) => {
   return {
@@ -15,7 +15,8 @@ export default defineConfig((ctx) => {
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [
       'i18n',
-      'axios'
+      'axios',
+      'csp',
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
@@ -92,7 +93,7 @@ export default defineConfig((ctx) => {
       // https: true,
       open: true, // opens browser window automatically
       allowedHosts: [
-        process.env.APP_URL,
+        app.host(),
       ],
       // hmr: {
       //   host: process.env.APP_HOST,
