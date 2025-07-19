@@ -5,6 +5,9 @@ import { defineConfig } from '#q-app/wrappers'
 import { fileURLToPath } from 'node:url'
 import app from 'src/config/app.js'
 
+import dotenv from 'dotenv'
+dotenv.config()
+
 export default defineConfig((ctx) => {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
@@ -45,7 +48,7 @@ export default defineConfig((ctx) => {
         node: 'node20'
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -94,6 +97,7 @@ export default defineConfig((ctx) => {
       open: true, // opens browser window automatically
       allowedHosts: [
         app.host(),
+        app.apiHost(),
       ],
       // hmr: {
       //   host: process.env.APP_HOST,

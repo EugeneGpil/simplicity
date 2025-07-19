@@ -1,9 +1,20 @@
+import ROUTE_NAMES from 'src/consts/route-names';
+
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      {
+        path: '',
+        name: ROUTE_NAMES.HOME,
+        component: () => import('pages/IndexPage.vue')
+      },
+      {
+        path: '/login',
+        name: ROUTE_NAMES.LOGIN,
+        component: () => import('pages/LoginPage.vue')
+      },
     ]
   },
 
