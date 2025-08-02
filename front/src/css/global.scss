@@ -1,0 +1,21 @@
+.q-layout {
+  height: 100vh;
+}
+
+.q-page-container {
+  height: 100%;
+}
+
+.button {
+  cursor: pointer;
+  color: var(--color-text-main-light);
+  background-color: var(--color-action);
+  padding: var(--gap-tiny) var(--gap-small);
+  line-height: var(--line-height-usual);
+  font-size: var(--text-usual);
+  border-radius: var(--border-radius-secondary);
+
+  &:hover {
+    background-color: var(--color-action-hover);
+  }
+}

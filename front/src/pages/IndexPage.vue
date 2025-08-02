@@ -8,10 +8,10 @@
 
 <style scoped lang="scss">
 .header {
-  height: 3.5rem;
-  background-color: var(--color-main-background);
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid var(--color-border);
+  height: var(--height-header);
+  background-color: var(--color-background-main);
+  padding: var(--gap-small) var(--gap-bigger);
+  border-bottom: var(--border-small) solid var(--color-border);
 }
 
 .burger {
@@ -19,7 +19,7 @@
 
   &__icon {
     font-weight: 900;
-    font-size: 1rem;
+    font-size: var(--text-usual);
     color: var(--color-icon);
     cursor: pointer;
 
