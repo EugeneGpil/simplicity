@@ -3,12 +3,11 @@
 </template>
 
 <script>
-import user from 'src/api/user'
+import me from 'src/func/me'
 
 export default {
   async mounted() {
-    const me = await user.me()
-    console.log('me', me)
+    me();
   }
 }
 </script>
