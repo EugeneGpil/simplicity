@@ -1,4 +1,4 @@
-import { useUserStore} from 'stores/user'
+import { useUserStore} from 'src/modules/user/models/user.js'
 import { Device } from '@capacitor/device'
 
 const fallback = 'en'

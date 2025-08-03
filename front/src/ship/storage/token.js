@@ -1,3 +1,3 @@
-import Parent from './parent'
+import Parent from './parent.js'
 
 export default new Parent('token')

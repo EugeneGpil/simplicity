@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import me from 'src/func/mounted/me'
-import lang from 'src/func/mounted/lang'
+import me from 'src/ship/func/mounted/me'
+import lang from 'src/ship/func/mounted/lang'
 
 export default {
   async mounted() {

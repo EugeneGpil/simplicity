@@ -1,7 +1,7 @@
 import { defineBoot } from '#q-app/wrappers'
 import axios from 'axios'
 import app from 'src/config/app.js';
-import token from 'src/storage/token'
+import token from 'src/ship/storage/token'
 import ROUTE_NAMES from 'src/consts/route-names'
 
 // Be careful when using SSR for cross-request state pollution

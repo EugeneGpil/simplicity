@@ -41,9 +41,9 @@
 
 <script setup>
 import ROUTE_NAMES from 'src/consts/route-names.js';
-import AdditionalButton from 'src/features/auth/ui/AdditionalButton.vue';
-import TitleComponent from 'src/features/auth/ui/TitleComponent.vue';
-import IconInputComponent from 'src/features/auth/ui/IconInputComponent.vue';
-import ButtonComponent from 'src/shared/ui/ButtonComponent.vue';
+import AdditionalButton from 'src/modules/auth/ui/shared/AdditionalButton.vue';
+import TitleComponent from 'src/modules/auth/ui/shared/TitleComponent.vue';
+import IconInputComponent from 'src/modules/auth/ui/shared/IconInputComponent.vue';
+import ButtonComponent from 'src/ship/shared/ui/ButtonComponent.vue';
 import FullScreenForm from 'src/widgets/FullScreenForm.vue';
 </script>
