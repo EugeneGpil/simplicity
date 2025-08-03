@@ -1,6 +1,12 @@
 <template>
   <div :class="`icon-input ${containerClass}`">
-    <input class="icon-input__input" :placeholder="placeholder" :type="type">
+    <input
+      class="icon-input__input"
+      :placeholder="placeholder"
+      :type="type"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
+    >
     <div class="icon-input__icon-container">
       <i :class="`icon-input__icon ${icon}`"/>
     </div>
@@ -10,6 +16,10 @@
 <script>
 export default {
   props: {
+    modelValue: {
+      type: String,
+      required: true,
+    },
     containerClass: {
       type: String,
       default: '',
@@ -27,6 +37,7 @@ export default {
       required: true,
     }
   },
+  emits: ['update:modelValue'],
 }
 </script>
 
