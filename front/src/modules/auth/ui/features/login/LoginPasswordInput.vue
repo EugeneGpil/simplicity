@@ -1,5 +1,5 @@
 <template>
-  <IconInputComponent
+  <IconInput
     v-model="loginStore.password"
     placeholder="Password"
     containerClass="full-screen-form__row"
@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import IconInputComponent from "src/modules/auth/ui/shared/IconInputComponent.vue";
+import IconInput from "src/modules/auth/ui/shared/IconInput.vue";
 import {useLoginStore} from 'src/modules/auth/models/login.js'
 
 const loginStore = useLoginStore()

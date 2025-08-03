@@ -1,5 +1,5 @@
 <template>
-  <IconInputComponent
+  <IconInput
     v-model="registerStore.email"
     placeholder="Email"
     containerClass="full-screen-form__row"
@@ -9,8 +9,8 @@
 </template>
 
 <script setup>
-import IconInputComponent from "src/modules/auth/ui/shared/IconInputComponent.vue";
-import {useRegisterStore} from 'src/modules/auth/models/register'
+import IconInput from "src/modules/auth/ui/shared/IconInput.vue";
+import {useRegisterStore} from 'src/modules/auth/models/register.js'
 
 const registerStore = useRegisterStore();
 </script>
