@@ -1,49 +1,25 @@
 <template>
   <FullScreenFormWidget>
     <TitleComponent
+      containerClass="full-screen-form__row"
       title="Register new account"
-      containerClass="full-screen-form__row"
     />
-    <IconInputComponent
-      placeholder="Full name"
-      containerClass="full-screen-form__row"
-      type="text"
-      icon="fas fa-user"
-    />
-    <IconInputComponent
-      placeholder="Email"
-      containerClass="full-screen-form__row"
-      type="email"
-      icon="fa-solid fa-envelope"
-    />
-    <IconInputComponent
-      placeholder="Password"
-      containerClass="full-screen-form__row"
-      type="password"
-      icon="fa-solid fa-lock"
-    />
-    <IconInputComponent
-      placeholder="Retype password"
-      containerClass="full-screen-form__row"
-      type="password"
-      icon="fa-solid fa-lock"
-    />
-    <ButtonComponent
-      title="Register"
-      containerClass="full-screen-form__small-button"
-    />
-    <AdditionalButton
-      title="I already have an account"
-      @click="$router.push({name: ROUTE_NAMES.LOGIN})"
-    />
+    <RegisterNameInputFeature/>
+    <RegisterEmailInputFeature/>
+    <RegisterPasswordInputFeature/>
+    <RegisterPasswordConfirmationFeature/>
+    <RegisterRegisterButtonFeature/>
+    <RegisterLoginButtonFeature/>
   </FullScreenFormWidget>
 </template>
 
 <script setup>
-import ROUTE_NAMES from 'src/ship/consts/route-names.js';
-import AdditionalButton from 'src/modules/auth/ui/shared/AdditionalButton.vue';
 import TitleComponent from 'src/modules/auth/ui/shared/TitleComponent.vue';
-import IconInputComponent from 'src/modules/auth/ui/shared/IconInputComponent.vue';
-import ButtonComponent from 'src/ship/shared/ui/ButtonComponent.vue';
 import FullScreenFormWidget from 'src/modules/auth/ui/widgets/FullScreenFormWidget.vue';
+import RegisterNameInputFeature from 'src/modules/auth/ui/features/RegisterNameInputFeature.vue'
+import RegisterEmailInputFeature from 'src/modules/auth/ui/features/RegisterEmailInputFeature.vue'
+import RegisterPasswordInputFeature from 'src/modules/auth/ui/features/RegisterPasswordInputFeature.vue'
+import RegisterPasswordConfirmationFeature from 'src/modules/auth/ui/features/RegisterPasswordConfirmationFeature.vue'
+import RegisterRegisterButtonFeature from 'src/modules/auth/ui/features/RegisterRegisterButtonFeature.vue'
+import RegisterLoginButtonFeature from 'src/modules/auth/ui/features/RegisterLoginButtonFeature.vue'
 </script>

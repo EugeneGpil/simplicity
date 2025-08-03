@@ -1,8 +1,8 @@
 <template>
   <FullScreenFormWidget>
     <TitleComponent
-        title="Sign in"
-        containerClass="full-screen-form__row"
+      title="Sign in"
+      containerClass="full-screen-form__row"
     />
     <LoginEmailInputFeature/>
     <LoginPasswordInputFeature/>
