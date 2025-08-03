@@ -17,9 +17,10 @@
         type="password"
         icon="fa-solid fa-lock"
       />
-      <div class="full-screen-form__small-button button">
-        Sign in
-      </div>
+      <ButtonComponent
+        title="Sign in"
+        containerClass="full-screen-form__small-button"
+      />
       <div class="full-screen-form__additional-button">
         Register a new membership
       </div>
@@ -30,6 +31,7 @@
 <script setup>
 import IconInputComponent from 'src/features/auth/ui/IconInputComponent.vue'
 import TitleComponent from 'src/features/auth/ui/TitleComponent.vue'
+import ButtonComponent from 'src/shared/ui/ButtonComponent.vue';
 </script>
 
 <style scoped lang="scss">
