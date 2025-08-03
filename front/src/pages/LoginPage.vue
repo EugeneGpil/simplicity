@@ -1,38 +1,21 @@
 <template>
-  <FullScreenForm>
+  <FullScreenFormWidget>
     <TitleComponent
         title="Sign in to start your session"
         containerClass="full-screen-form__row"
     />
-    <IconInputComponent
-        placeholder="Email"
-        containerClass="full-screen-form__row"
-        type="email"
-        icon="fa-solid fa-envelope"
-    />
-    <IconInputComponent
-        placeholder="Password"
-        containerClass="full-screen-form__row"
-        type="password"
-        icon="fa-solid fa-lock"
-    />
-    <ButtonComponent
-        title="Sign in"
-        containerClass="full-screen-form__small-button"
-    />
-    <AdditionalButton
-        title="Register a new membership"
-        @click="$router.push({name: ROUTE_NAMES.REGISTER})"
-    />
-  </FullScreenForm>
+    <LoginEmailInputFeature/>
+    <LoginPasswordInputFeature/>
+    <LoginSignInButtonFeature/>
+    <LoginRegisterButtonFeature/>
+  </FullScreenFormWidget>
 </template>
 
 <script setup>
-import AdditionalButton from 'src/modules/auth/ui/shared/AdditionalButton.vue';
-import IconInputComponent from 'src/modules/auth/ui/shared/IconInputComponent.vue';
+import LoginEmailInputFeature from 'src/modules/auth/ui/features/LoginEmailInputFeature.vue';
+import LoginPasswordInputFeature from 'src/modules/auth/ui/features/LoginPasswordInputFeature.vue';
+import LoginRegisterButtonFeature from 'src/modules/auth/ui/features/LoginRegisterButtonFeature.vue';
+import LoginSignInButtonFeature from 'src/modules/auth/ui/features/LoginSignInButtonFeature.vue';
 import TitleComponent from 'src/modules/auth/ui/shared/TitleComponent.vue';
-import ButtonComponent from 'src/ship/shared/ui/ButtonComponent.vue';
-import FullScreenForm from 'src/widgets/FullScreenForm.vue';
-
-import ROUTE_NAMES from 'src/consts/route-names';
+import FullScreenFormWidget from 'src/modules/auth/ui/widgets/FullScreenFormWidget.vue';
 </script>

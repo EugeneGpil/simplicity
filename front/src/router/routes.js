@@ -1,4 +1,4 @@
-import ROUTE_NAMES from 'src/consts/route-names';
+import ROUTE_NAMES from 'src/ship/consts/route-names';
 
 const routes = [
   {

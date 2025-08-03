@@ -1,5 +1,5 @@
 <template>
-  <FullScreenForm>
+  <FullScreenFormWidget>
     <TitleComponent
       title="Register a new membership"
       containerClass="full-screen-form__row"
@@ -36,14 +36,14 @@
       title="I already have an account"
       @click="$router.push({name: ROUTE_NAMES.LOGIN})"
     />
-  </FullScreenForm>
+  </FullScreenFormWidget>
 </template>
 
 <script setup>
-import ROUTE_NAMES from 'src/consts/route-names.js';
+import ROUTE_NAMES from 'src/ship/consts/route-names.js';
 import AdditionalButton from 'src/modules/auth/ui/shared/AdditionalButton.vue';
 import TitleComponent from 'src/modules/auth/ui/shared/TitleComponent.vue';
 import IconInputComponent from 'src/modules/auth/ui/shared/IconInputComponent.vue';
 import ButtonComponent from 'src/ship/shared/ui/ButtonComponent.vue';
-import FullScreenForm from 'src/widgets/FullScreenForm.vue';
+import FullScreenFormWidget from 'src/modules/auth/ui/widgets/FullScreenFormWidget.vue';
 </script>
