@@ -36,6 +36,32 @@ import ButtonComponent from 'src/shared/ui/ButtonComponent.vue';
 
 <style scoped lang="scss">
 .full-screen-form {
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-secondary);
+
+  &__content {
+    width: 90vw;
+    max-width: var(--width-full-screen-form);
+    padding: var(--gap-usual);
+    background-color: var(--color-background-main);
+    border-top: var(--border-medium) solid var(--color-action);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-secondary);
+  }
+
+  &__row {
+    margin-bottom: var(--gap-smaller);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__small-button {
     align-self: flex-end;
     margin-bottom: var(--gap-smaller);
