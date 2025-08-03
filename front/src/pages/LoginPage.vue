@@ -1,9 +1,10 @@
 <template>
   <div class="full-screen-form">
     <div class="full-screen-form__content">
-      <div class="form-title full-screen-form__row">
-        Sign in to start your session
-      </div>
+      <FullScreenTitleComponent
+        title="Sign in to start your session"
+        containerClass="full-screen-form__row"
+      />
       <div class="icon-input full-screen-form__row">
         <input class="icon-input__input" placeholder="Email">
         <div class="icon-input__icon-container">
@@ -27,43 +28,11 @@
   </div>
 </template>
 
+<script setup>
+import FullScreenTitleComponent from 'src/shared/ui/FullScreenTitleComponent.vue'
+</script>
+
 <style scoped lang="scss">
-.full-screen-form {
-  width: 100wh;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-background-secondary);
-
-  &__content {
-    width: 90vw;
-    max-width: var(--width-full-screen-form);
-    padding: var(--gap-usual);
-    background-color: var(--color-background-main);
-    border-top: var(--border-medium) solid var(--color-action);
-    display: flex;
-    flex-direction: column;
-    border-radius: var(--border-radius-secondary);
-  }
-
-  &__row {
-    margin-bottom: var(--gap-smaller);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.form-title {
-  width: 100%;
-  text-align: center;
-  font-size: var(--font-size-h3);
-  line-height: var(--font-size-h3);
-  color: var(--color-text-main);
-}
-
 .icon-input {
   display: flex;
   justify-content: center;
@@ -121,7 +90,4 @@
     }
   }
 }
-
 </style>
-<script setup lang="ts">
-</script>
