@@ -21,14 +21,13 @@
         title="Sign in"
         containerClass="full-screen-form__small-button"
       />
-      <div class="full-screen-form__additional-button">
-        Register a new membership
-      </div>
+      <AdditionalButton title="Register a new membership" />
     </div>
   </div>
 </template>
 
 <script setup>
+import AdditionalButton from 'src/features/auth/ui/AdditionalButton.vue';
 import IconInputComponent from 'src/features/auth/ui/IconInputComponent.vue'
 import TitleComponent from 'src/features/auth/ui/TitleComponent.vue'
 import ButtonComponent from 'src/shared/ui/ButtonComponent.vue';
@@ -65,15 +64,6 @@ import ButtonComponent from 'src/shared/ui/ButtonComponent.vue';
   &__small-button {
     align-self: flex-end;
     margin-bottom: var(--gap-smaller);
-  }
-
-  &__additional-button {
-    color: var(--color-text-action);
-    cursor: pointer;
-
-    &:hover {
-      color: var(--color-text-action-hover);
-    }
   }
 }
 </style>
