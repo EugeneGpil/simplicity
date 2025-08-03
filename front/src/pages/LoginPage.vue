@@ -1,7 +1,7 @@
 <template>
   <FullScreenFormWidget>
     <TitleComponent
-        title="Sign in to start your session"
+        title="Sign in"
         containerClass="full-screen-form__row"
     />
     <LoginEmailInputFeature/>

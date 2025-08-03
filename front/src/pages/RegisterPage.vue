@@ -1,7 +1,7 @@
 <template>
   <FullScreenFormWidget>
     <TitleComponent
-      title="Register a new membership"
+      title="Register new account"
       containerClass="full-screen-form__row"
     />
     <IconInputComponent

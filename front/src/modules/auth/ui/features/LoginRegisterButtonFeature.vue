@@ -1,6 +1,6 @@
 <template>
   <AdditionalButton
-    title="Register a new membership"
+    title="Register new account"
     @click="$router.push({name: ROUTE_NAMES.REGISTER})"
   />
 </template>
