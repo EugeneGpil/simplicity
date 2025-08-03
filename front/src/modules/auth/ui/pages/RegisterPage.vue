@@ -1,6 +1,6 @@
 <template>
   <FullScreenForm>
-    <Title
+    <TitleComponent
       containerClass="full-screen-form__row"
       title="Register new account"
     />
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import Title from 'src/modules/auth/ui/shared/Title.vue';
+import TitleComponent from 'src/modules/auth/ui/shared/TitleComponent.vue';
 import FullScreenForm from 'src/modules/auth/ui/widgets/FullScreenForm.vue';
 import RegisterNameInput from 'src/modules/auth/ui/features/register/RegisterNameInput.vue'
 import RegisterEmailInput from 'src/modules/auth/ui/features/register/RegisterEmailInput.vue'
