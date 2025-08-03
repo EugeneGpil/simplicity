@@ -1,4 +1,4 @@
-import user from 'src/api/user.js';
+import user from 'src/ship/api/user.js';
 
 export default async () => {
   const me = await user.me()
