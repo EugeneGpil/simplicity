@@ -8,12 +8,12 @@ const routes = [
       {
         path: '',
         name: ROUTE_NAMES.HOME,
-        component: () => import('pages/IndexPage.vue')
+        component: () => import('pages/IndexPage/index.vue')
       },
       {
         path: '/login',
         name: ROUTE_NAMES.LOGIN,
-        component: () => import('pages/LoginPage.vue')
+        component: () => import('pages/LoginPage/index.vue')
       },
     ]
   },
@@ -22,7 +22,7 @@ const routes = [
   // but you can also remove it
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
+    component: () => import('pages/ErrorNotFound/index.vue')
   }
 ]
 

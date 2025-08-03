@@ -22,7 +22,7 @@ export default {
       }
     }
 
-    await lang();
+    await lang()
   }
 }
 </script>
