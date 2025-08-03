@@ -1,9 +1,9 @@
 import { useUserStore} from 'stores/user'
 import { Device } from '@capacitor/device'
 
-const fallback = 'en';
+const fallback = 'en'
 
-const supported = ['en', 'ru'];
+const supported = [fallback, 'ru']
 
 export default async () => {
   const userStore = useUserStore()
@@ -15,19 +15,23 @@ export default async () => {
   let lang;
 
   try {
-    const res = await Device.getLanguageCode();
-    lang = res.value;
-  } catch {
-    lang = navigator.language;
+    const res = await Device.getLanguageCode()
+    lang = res?.value
+  } catch (e) {
+    console.error(e)
+  }
+
+  if (!lang) {
+    lang = navigator?.language || fallback
   }
 
   try {
-    lang = lang.split('-')[0];
+    lang = lang.split('-')[0]
   } catch {
     lang = fallback
   }
 
   lang = supported.includes(lang) ? lang : fallback
 
-  userStore.lang = lang;
+  userStore.lang = lang
 }

@@ -9,7 +9,19 @@ import lang from 'src/func/mounted/lang'
 export default {
   async mounted() {
     // order of running functions matter
-    await me();
+    const steps = [
+      me,
+      lang,
+    ]
+
+    for (const step of steps) {
+      try {
+        await step()
+      } catch (e) {
+        console.error(e)
+      }
+    }
+
     await lang();
   }
 }
