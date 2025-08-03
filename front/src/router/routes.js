@@ -15,7 +15,12 @@ const routes = [
         name: ROUTE_NAMES.LOGIN,
         component: () => import('pages/LoginPage.vue')
       },
-    ]
+      {
+        path: '/register',
+        name: ROUTE_NAMES.REGISTER,
+        component: () => import('pages/RegisterPage.vue')
+      },
+    ],
   },
 
   // Always leave this as last one,

@@ -29,6 +29,14 @@ export default defineBoot(({ app, router }) => {
     response => response,
     error => {
       if (error?.response?.status === 401) {
+        const exceptionRoutes = [
+          ROUTE_NAMES.REGISTER,
+        ]
+
+        if (exceptionRoutes.includes(router.currentRoute.value.name)) {
+          return Promise.reject(error);
+        }
+
         router.push({name: ROUTE_NAMES.LOGIN});
       }
       return Promise.reject(error);
