@@ -8,17 +8,9 @@
   />
 </template>
 
-<script>
+<script setup>
 import IconInputComponent from "src/modules/auth/ui/shared/IconInputComponent.vue";
-
 import {useLoginStore} from 'src/modules/auth/models/login.js'
 
-export default {
-  setup: () => ({
-    loginStore: useLoginStore(),
-  }),
-  components: {
-    IconInputComponent,
-  },
-}
+const loginStore = useLoginStore()
 </script>
